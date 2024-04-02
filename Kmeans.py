@@ -17,6 +17,11 @@ model = kmeans.fit(dataset) #performs clustering
 #apply trained model to dataset
 predictions = model.transform(dataset)
 
+predictionssss = predictions.select("features","prediction").collect()
+
+for i in predictionssss:
+    print(i)
+
 #Get cluster center (vector form)
 centers = model.clusterCenters()
 
