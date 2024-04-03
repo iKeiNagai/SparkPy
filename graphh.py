@@ -11,7 +11,7 @@ x = array[:, 0]
 y = array[:, 1]
 
 #Plot data as a scatter plot
-plt.scatter(x, y, c=list)
+plt.scatter(x, y)
 
 #cluster 1 color red and cross mark
 x_cluster1 = x[list == 0]
@@ -21,14 +21,14 @@ plt.scatter(x_cluster1, y_cluster1, color='red', marker='x', label='Cluster 1')
 #cluster 2 color blue and circle mark
 x_cluster2 = x[list == 1]
 y_cluster2 = y[list == 1]
-plt.scatter(x_cluster1, y_cluster1, color='blue', marker='o', label='Cluster 2')
+plt.scatter(x_cluster2, y_cluster2, color='blue', marker='o', label='Cluster 2')
 
 #extrated centers from file
 x_centroid = centers[0]
 y_centroid = centers[1]
 
 #Plot centers as red and triangle in graph
-plt.scatter(x_centroid,y_centroid, c='red', marker='^')
+plt.scatter(x_centroid,y_centroid, c='yellow', marker='^')
 
 #show graph
 plt.show()
