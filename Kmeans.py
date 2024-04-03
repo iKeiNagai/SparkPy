@@ -33,6 +33,7 @@ for i in predictionssss:
 
 #Get cluster center (vector form)
 centers = model.clusterCenters()
+np.savetxt("centers.txt", centers) #save centroids in file
 
 #Displays cluster centers
 print("Cluster Centers: ")
