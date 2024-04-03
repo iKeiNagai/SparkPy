@@ -16,3 +16,10 @@ Spark/python
 #Dataframe&SparkSQL
 - Input file people.json
 - compute average age using dataframe&SQl 
+
+#Kmeans&graphh (spark ML)
+- Input files kmeans_input
+- Compute two clusters from kmeans_input
+- outputs data point with prediction
+- outputs file features(data),clusternum(prediction), and centers
+- graphh use output files to create scatter graph
