@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.ml.clustering import KMeans
+import numpy as np
 
 #Creates Session
 spark = SparkSession.builder \
@@ -18,6 +19,14 @@ model = kmeans.fit(dataset) #performs clustering
 predictions = model.transform(dataset)
 
 predictionssss = predictions.select("features","prediction").collect()
+
+#array of features
+features = predictions.select("features").rdd.map(lambda row: row.features.toArray()).collect()
+#list of clusternum
+clusternum = predictions.select("prediction").rdd.map(lambda row: row.prediction).collect()
+
+np.savetxt("features.txt",features)
+np.savetxt("clusternum.txt", clusternum)
 
 for i in predictionssss:
     print(i)
