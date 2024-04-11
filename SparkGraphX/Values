@@ -1,0 +1,9 @@
+
+decayFactor c=0.85
+
+Expected Nodes PageRank Values
+1 0.1556
+2 0.1622
+3 0.2312
+4 0.2955
+5 0.1556
