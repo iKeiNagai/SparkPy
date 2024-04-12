@@ -23,3 +23,9 @@ Spark/python
 - outputs data point with prediction
 - outputs file features(data),clusternum(prediction), and centers
 - graphh use output files to create scatter graph
+
+#spark_pagerank (spark GraphX)
+- spark-shell  -i  spark_pagerank_graphx.scala to run
+- Input files 02AdjacencyList
+- creates directed graph from 02AdjacencyList
+- Calculates pagerank of each node in graph
