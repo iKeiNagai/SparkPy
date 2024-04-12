@@ -48,3 +48,10 @@ println(PageRankValues1.mkString("\n"))
 
 //prints file
 file.collect().foreach(println)
+
+//save result to textfile
+PageRankVertices1.map { case (vertexId, pageRank) =>
+    s"$vertexId: $pageRank"
+  }
+  .coalesce(1)  // Reduce to a single partition
+  .saveAsTextFile("results")
